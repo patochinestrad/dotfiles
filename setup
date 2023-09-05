@@ -11,7 +11,7 @@ sudo apt install ./keyring.deb
 echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | sudo tee /etc/apt/sources.list.d/sur5r-i3.list
 
 # install i3, clipit, kitty, zsh
-sudo apt update && sudo apt install i3 clipit kitty zsh
+sudo apt update && sudo apt install -y i3 clipit kitty zsh rofi ripgrep feh 
 
 rm ./keyring.deb
 
@@ -33,13 +33,22 @@ wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20R
 # change to zsh
 sudo chsh -s $(which zsh)
 
-# add nvim to path
-echo "path+=('$(echo ~)/nvim-linux64/bin')" >> ~/.zshrc
+# check if nvim in path, if not add it
+if grep -Fxq "path+=('$(echo ~)/nvim-linux64/bin')" ~/.zshrc
+then 
+  echo NVIM PATH ALREADY IN ~/.zshrc , SKIPPING!
+else
+  echo "path+=('$(echo ~)/nvim-linux64/bin')" >> ~/.zshrc
+fi
 
 # add p10k theme to omz
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# replace default omz theme with p10k
-sudo sed -i -e 's|ZSH_THEME=.*$|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
-
+# check if theme is p10k, if not replace default omz theme with p10k
+if grep -Fxq 'ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
+then
+  echo P10K ALREADY DEFAULT THEME IN ~/.zshrc , SKIPPING! 
+else
+  sed -i -e 's|ZSH_THEME=.*$|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
+fi
 echo \n END OF SCRIPT, YOU NEED TO SOURCE THE ~/.zshrc FROM ZSH SHELL
