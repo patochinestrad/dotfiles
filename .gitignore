@@ -3,11 +3,11 @@
 
 # except the following
 !.gitignore
-!.git/*
+!/.git/*
 !setup
-!clipit/*
-!gh/*
-!i3/*
-!kitty/*
-!polybar/*
-!nvim/*
+!/clipit/*
+!/gh/*
+!/i3/*
+!/kitty/*
+!/polybar/*
+!/nvim/*
