@@ -1,2 +1,14 @@
 # ignore
 dconf/
+gtk-3.0/
+goa-1.0/
+evolution/
+ibus/
+google-chrome/
+pulse/
+.gsd-keyboard.settings-ported
+gnome-initial-setup-done
+mimeapps.list
+user-dirs.dirs
+user-dirs.locale
+
