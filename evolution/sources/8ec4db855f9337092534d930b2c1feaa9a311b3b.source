@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=pato_chine@hotmail.com
+Enabled=true
+Parent=62da946928d6b5f5d1c0c07a2d0b47b490eb7a25
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=c489ec983662027ccd851c0fa81e8dc0f8b859df
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=pato_chine@hotmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none

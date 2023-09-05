@@ -1,13 +1,2 @@
-# ignore everything
 *
-
-# except the following
-!.gitignore
-!/.git
-!setup
-!./clipit
-!./gh
-!./i3
-!./kitty
-!./polybar
-!./nvim
+!./nvim/

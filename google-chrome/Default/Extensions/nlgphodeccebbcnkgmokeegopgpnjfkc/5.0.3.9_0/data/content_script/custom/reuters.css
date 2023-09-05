@@ -1,0 +1,36 @@
+:root{
+    --bg-color: rgb(15, 15, 15);
+    --input-border-color: rgba(211,211,211,0.2);
+}
+*::-webkit-scrollbar, *::-webkit-scrollbar-track, *::-webkit-scrollbar-button, div::-webkit-scrollbar{
+  width: 8px !important;
+  height: 5px !important;
+  background-color: var(--bg-color) !important;
+  border:none !important;
+}
+*::-webkit-scrollbar-thumb {
+    background: var(--input-border-color) !important; 
+	border:none !important;
+}
+*::-webkit-scrollbar-button{display:none !important;}
+
+html{
+  background: #000 !important;
+}
+
+body {
+  background-color: #FFF !important;
+  filter: invert(.95) sepia(.1) brightness(.99) !important;
+  -moz-filter: invert(.95) sepia(.1) brightness(.99) !important;
+  -webkit-filter: invert(.95) sepia(.1) brightness(.99) !important;
+}
+
+em, img, svg, image, video, audio, embed, iframe, object, button, canvas, figure:empty, *[style*="background-image"], *[class*=icon], *[class*=Icon], *[class=button], *[style*="background-position"], *[style*=background-repeat], *[style*="url("]{
+  filter: invert(1) brightness(.99) saturate(1.2) !important;
+  -moz-filter: invert(1) brightness(.99) saturate(1.2) !important;
+  -webkit-filter: invert(1) brightness(.99) saturate(1.2) !important;
+}
+button{filter:invert(0) !important;}
+.VideoHub div{
+  /*filter: invert(1);*/
+}

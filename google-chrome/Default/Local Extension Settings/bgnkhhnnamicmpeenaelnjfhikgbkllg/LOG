@@ -1,0 +1,30 @@
+2023/09/05-11:23:26.292 2f52 Creating DB /home/patricio/.config/google-chrome/Default/Local Extension Settings/bgnkhhnnamicmpeenaelnjfhikgbkllg since it was missing.
+2023/09/05-11:23:26.296 2f52 Reusing MANIFEST /home/patricio/.config/google-chrome/Default/Local Extension Settings/bgnkhhnnamicmpeenaelnjfhikgbkllg/MANIFEST-000001
+2023/09/05-11:23:26.930 2f53 Level-0 table #5: started
+2023/09/05-11:23:26.952 2f53 Level-0 table #5: 2889629 bytes OK
+2023/09/05-11:23:26.954 2f53 Delete type=0 #3
+2023/09/05-11:53:27.101 2f53 Level-0 table #7: started
+2023/09/05-11:53:27.141 2f53 Level-0 table #7: 3042608 bytes OK
+2023/09/05-11:53:27.143 2f53 Delete type=0 #4
+2023/09/05-12:53:27.801 2f53 Level-0 table #9: started
+2023/09/05-12:53:27.840 2f53 Level-0 table #9: 3019793 bytes OK
+2023/09/05-12:53:27.843 2f53 Delete type=0 #6
+2023/09/05-13:53:28.716 2f53 Level-0 table #11: started
+2023/09/05-13:53:28.747 2f53 Level-0 table #11: 3548261 bytes OK
+2023/09/05-13:53:28.767 2f53 Delete type=0 #8
+2023/09/05-14:53:29.484 2f53 Level-0 table #13: started
+2023/09/05-14:53:29.514 2f53 Level-0 table #13: 3220207 bytes OK
+2023/09/05-14:53:29.520 2f53 Delete type=0 #10
+2023/09/05-15:53:30.062 2f53 Level-0 table #15: started
+2023/09/05-15:53:30.092 2f53 Level-0 table #15: 2926845 bytes OK
+2023/09/05-15:53:30.094 2f53 Delete type=0 #12
+2023/09/05-15:53:30.095 2f53 Compacting 4@0 + 1@1 files
+2023/09/05-15:53:30.128 2f53 Generated table #16@0: 3 keys, 2581357 bytes
+2023/09/05-15:53:30.131 2f53 Generated table #17@0: 3 keys, 131492 bytes
+2023/09/05-15:53:30.131 2f53 Compacted 4@0 + 1@1 files => 2712849 bytes
+2023/09/05-15:53:30.132 2f53 compacted to: files[ 0 2 1 0 0 0 0 ]
+2023/09/05-15:53:30.132 2f53 Delete type=2 #11
+2023/09/05-15:53:30.132 2f53 Delete type=2 #15
+2023/09/05-15:53:30.132 2f53 Delete type=2 #9
+2023/09/05-15:53:30.132 2f53 Delete type=2 #7
+2023/09/05-15:53:30.132 2f53 Delete type=2 #13
