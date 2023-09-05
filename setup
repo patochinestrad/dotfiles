@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+# copy configs to .config
+# sudo rsync -aP --exclude=setup . ~/.config
+
+# Add the i3 repo with gaps
+/usr/lib/apt/apt-helper download-file https://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2023.02.18_all.deb keyring.deb SHA256:a511ac5f10cd811f8a4ca44d665f2fa1add7a9f09bef238cdfad8461f5239cc4
+
+sudo apt install ./keyring.deb
+
+echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | sudo tee /etc/apt/sources.list.d/sur5r-i3.list
+
+# install i3, clipit, kitty, zsh
+sudo apt update && sudo apt install i3 clipit kitty zsh
+
+rm ./keyring.deb
+
+# download and decompress nvim 
+wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz -O ~/nvim-linux64.tar.gz && sudo tar -zxvf ~/nvim-linux64.tar.gz -C ~/
+
+# remove nvim tar
+rm ~/nvim-linux64.tar.gz
+
+# install oh my zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# make home font dir
+mkdir ~/.fonts
+
+# download meslo fonts
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.fonts
+
+# change to zsh
+sudo chsh -s $(which zsh)
+
+# add nvim to path
+echo "path+=('$(echo ~)/nvim-linux64/bin')" >> ~/.zshrc
+
+# add p10k theme to omz
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# replace default omz theme with p10k
+sudo sed -i -e 's|ZSH_THEME=.*$|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
+
+echo \n END OF SCRIPT, YOU NEED TO SOURCE THE ~/.zshrc FROM ZSH SHELL
