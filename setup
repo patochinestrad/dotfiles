@@ -31,6 +31,11 @@ mkdir ~/.fonts
 git clone https://github.com/noctuid/zscroll ~/.config
 sudo python3 ~/.config/zscroll/setup.py install
 
+# install playercltd to get spotify data
+wget https://github.com/altdesktop/playerctl/releases/download/v2.4.1/playerctl-2.4.1_amd64.deb -O ~/.config/playerctl.deb
+sudo dpkg -i ~/.config/playerctl.deb
+rm ~/.config/playerctl.deb
+
 # download meslo fonts
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.fonts
 
