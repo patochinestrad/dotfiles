@@ -3,10 +3,18 @@
 # Terminate already running bar instances
 killall -q polybar
 
-# Launch bar1 and bar2
-echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
+#if type "xrandr"; then
+#  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+#    MONITOR=$m polybar --config=~/.config/polybar/config.ini &
+#  done
+#else
+#  polybar --config=~/.config/polybar/config.ini &
+#fi
 
 #polybar example  >>/tmp/polybar1.log 2>&1 &
-polybar --config=~/.config/polybar/config.ini top -r >>/tmp/polybar1.log 2>&1 
+#polybar --config=~/.config/polybar/config.ini top -r >>/tmp/polybar1.log 2>&1 
 
-echo "Bars launched..."
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar --config=~/.config/polybar/config.ini top &
+done
+
