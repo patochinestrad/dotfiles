@@ -214,8 +214,10 @@ gaps inner 15
 gaps outer 10
 
 # set us keyboard
-exec_always "setxkbmap -model pc104 -layout us,es -variant ,, -option grp:alt_shift_toggle"
+exec_always --no-startup-id setxkbmap -model pc104 -layout us,es -variant ,, -option grp:alt_shift_toggle
 
 # set wallpaper with feh
+exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.jpg
 
-exec_always "feh --bg-scale ~/.config/wallpaper.jpg"
+# set picom as compositor
+exec_always --no-startup-id picom --config ~/.config/picom/config.conf
