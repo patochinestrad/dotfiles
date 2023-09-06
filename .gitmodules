@@ -1,0 +1,3 @@
+[submodule "zscroll"]
+	path = zscroll
+	url = https://github.com/noctuid/zscroll
