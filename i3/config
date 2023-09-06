@@ -228,3 +228,6 @@ exec_always --no-startup-id picom --config ~/.config/picom/config.conf
 
 # use dunst for notifications
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+# betterlockscreen
+exec --no-startup-id betterlockscreen -w dim

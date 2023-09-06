@@ -1,5 +1,5 @@
 [global]
-    font = MesloLGS Regular 12
+    font = MesloLGS Bold 12
     allow_markup = yes
     format = "%s\n%b"
     sort = yes
@@ -29,7 +29,7 @@
     icon_folders = /usr/share/icons/Notifications
  
 [frame]
-    color = "#989cff"
+    color = "#6b70e0"
     width = 0
  
 [shortcuts]
@@ -40,17 +40,17 @@
  
 [urgency_low]
     background = "#ed88a6"  
-    foreground = "#989cff"  
+    foreground = "#6b70e0"  
     timeout = 5
  
 [urgency_normal]
     background = "#ed88a6" 
-    foreground = "#989cff" 
+    foreground = "#6b70e0" 
     timeout = 5
  
 [urgency_critical]
     background = "#ed88a6"
-    foreground = "#989cff"
+    foreground = "#6b70e0"
     timeout = 5
  
 [Spotify]

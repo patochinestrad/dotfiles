@@ -60,4 +60,13 @@ then
 else
   sed -i -e 's|ZSH_THEME=.*$|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
 fi
+
+# add local bin to path
+if grep -Fxq "path+=('$(echo ~)/.local/bin')" ~/.zshrc
+then 
+  echo NVIM PATH ALREADY IN ~/.zshrc , SKIPPING!
+else
+  echo "path+=('$(echo ~)/.local/bin')" >> ~/.zshrc
+fi
+
 echo \n END OF SCRIPT, YOU NEED TO SOURCE THE ~/.zshrc FROM ZSH SHELL
