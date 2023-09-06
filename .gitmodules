@@ -1,3 +1,6 @@
 [submodule "zscroll"]
 	path = zscroll
 	url = https://github.com/noctuid/zscroll
+[submodule "rofi"]
+	path = rofi
+	url = https://github.com/adi1090x/rofi.git
