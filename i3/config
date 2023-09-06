@@ -216,3 +216,6 @@ gaps outer 10
 # set us keyboard
 exec_always "setxkbmap -model pc104 -layout us,es -variant ,, -option grp:alt_shift_toggle"
 
+# set wallpaper with feh
+
+exec_always "feh --bg-scale ~/.config/wallpaper.jpg"
