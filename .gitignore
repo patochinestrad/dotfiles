@@ -17,3 +17,6 @@ enchant/
 textualize/
 gedit/
 libreoffice/
+zoom*
+QtProject.conf
+cef_user_data/
