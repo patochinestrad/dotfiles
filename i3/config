@@ -233,3 +233,7 @@ exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id betterlockscreen -w dim
 exec --no-startup-id source ~/.fehbg
 bindsym Mod4+shift+x exec betterlockscreen -l dim
+
+# flameshot
+bindsym Mod4+shift+f exec flameshot gui -c 
+
