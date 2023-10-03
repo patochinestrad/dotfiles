@@ -1,0 +1,1422 @@
+{
+    "type": "group",
+    "enabled": true,
+    "expanded": true,
+    "name": "parameters",
+    "value": null,
+    "default": null,
+    "children": {
+        "General": {
+            "type": "group",
+            "enabled": true,
+            "expanded": true,
+            "name": "General",
+            "value": null,
+            "default": null,
+            "children": {
+                "theme": {
+                    "type": "list",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "theme",
+                    "value": "darkgrid",
+                    "values": [
+                        "darkgrid",
+                        "---0",
+                        "whitegrid",
+                        "dark",
+                        "white",
+                        "ticks"
+                    ],
+                    "default": "darkgrid",
+                    "action_type": 3,
+                    "tip": "changes visual theme for all plots"
+                },
+                "toolbar": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "toolbar",
+                    "value": false,
+                    "default": false,
+                    "action_type": 2,
+                    "tip": "shows toolbar in all graphs"
+                },
+                "figure-format": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "figure-format",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "dpi-plot": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "dpi-plot",
+                            "value": 100,
+                            "step": 10,
+                            "accelerated": true,
+                            "limits": [
+                                50,
+                                300
+                            ],
+                            "default": 100,
+                            "action_type": 3,
+                            "tip": "set dpi for all plots"
+                        },
+                        "dpi-save": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "dpi-save",
+                            "value": 300,
+                            "step": 10,
+                            "accelerated": true,
+                            "limits": [
+                                50,
+                                1200
+                            ],
+                            "default": 300,
+                            "action_type": 2,
+                            "tip": "dpi used for saved figures"
+                        },
+                        "save-format": {
+                            "type": "list",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "save-format",
+                            "value": "svg",
+                            "values": [
+                                "svg",
+                                "png",
+                                "tiff",
+                                "pdf",
+                                "eps",
+                                "jpg",
+                                "jpeg",
+                                "pgf",
+                                "ps",
+                                "raw",
+                                "rgba",
+                                "svgz",
+                                "tif"
+                            ],
+                            "default": "svg",
+                            "action_type": 2
+                        }
+                    }
+                }
+            }
+        },
+        "Line Plot": {
+            "type": "group",
+            "enabled": true,
+            "expanded": false,
+            "name": "Line Plot",
+            "value": null,
+            "default": null,
+            "children": {
+                "line-width": {
+                    "type": "float",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "line-width",
+                    "value": 0.7,
+                    "step": 0.1,
+                    "limits": [
+                        0.1,
+                        1.5
+                    ],
+                    "accelerated": true,
+                    "default": 0.7,
+                    "action_type": 3
+                },
+                "line-color": {
+                    "type": "color",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "line-color",
+                    "value": [
+                        0,
+                        0,
+                        0,
+                        255
+                    ],
+                    "default": [
+                        0,
+                        0,
+                        0,
+                        255
+                    ],
+                    "action_type": 3
+                },
+                "Rolling average": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "Rolling average",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "show": {
+                            "type": "bool",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "show",
+                            "value": true,
+                            "default": true,
+                            "action_type": 3
+                        },
+                        "color": {
+                            "type": "color",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "color",
+                            "value": [
+                                255,
+                                0,
+                                0,
+                                255
+                            ],
+                            "default": [
+                                255,
+                                0,
+                                0,
+                                255
+                            ],
+                            "action_type": 3
+                        },
+                        "style": {
+                            "type": "list",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "style",
+                            "value": "dashed",
+                            "values": [
+                                "dashed",
+                                "solid",
+                                "dashdot",
+                                "dotted"
+                            ],
+                            "default": "dashed",
+                            "action_type": 3
+                        },
+                        "width": {
+                            "type": "float",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "width",
+                            "value": 0.8,
+                            "step": 0.1,
+                            "default": 0.8,
+                            "action_type": 3
+                        },
+                        "window": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "window",
+                            "value": 50,
+                            "step": 1,
+                            "limits": [
+                                2,
+                                100000
+                            ],
+                            "accelerated": true,
+                            "default": 50,
+                            "action_type": 3
+                        },
+                        "first_obs": {
+                            "type": "list",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "first_obs",
+                            "value": "window",
+                            "values": [
+                                "window",
+                                "start"
+                            ],
+                            "default": "window",
+                            "action_type": 3,
+                            "tip": "Defines the start value of the moving average. Window: set start according tothe defined window size. Start: set start at the first value."
+                        }
+                    }
+                },
+                "fontsize": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "fontsize",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "x-ticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-ticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 1
+                        },
+                        "y-ticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-ticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 1
+                        },
+                        "x-label": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-label",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        },
+                        "y-label": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-label",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        },
+                        "title": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "title",
+                            "value": 14,
+                            "default": 14,
+                            "action_type": 1
+                        },
+                        "suptitle": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "suptitle",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        },
+                        "legend": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "legend",
+                            "value": 9,
+                            "default": 9,
+                            "action_type": 1
+                        }
+                    }
+                },
+                "axes": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "axes",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "num-xticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "num-xticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 3
+                        },
+                        "num-yticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "num-yticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 3
+                        },
+                        "x-rotation": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-rotation",
+                            "value": 0,
+                            "step": 1,
+                            "limits": [
+                                -90,
+                                90
+                            ],
+                            "accelerated": true,
+                            "default": 0,
+                            "action_type": 1
+                        },
+                        "y-rotation": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-rotation",
+                            "value": 0,
+                            "step": 1,
+                            "limits": [
+                                -90,
+                                90
+                            ],
+                            "accelerated": true,
+                            "default": 0,
+                            "action_type": 1
+                        }
+                    }
+                },
+                "figure": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "figure",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "width": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "width",
+                            "value": 8,
+                            "default": 8,
+                            "action_type": 3
+                        },
+                        "height": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "height",
+                            "value": 4,
+                            "default": 4,
+                            "action_type": 3
+                        }
+                    }
+                }
+            }
+        },
+        "Bar Plot": {
+            "type": "group",
+            "enabled": true,
+            "expanded": false,
+            "name": "Bar Plot",
+            "value": null,
+            "default": null,
+            "children": {
+                "use-palette": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "use-palette",
+                    "value": true,
+                    "default": true,
+                    "action_type": 3
+                },
+                "palette": {
+                    "type": "list",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "palette",
+                    "value": "husl",
+                    "values": [
+                        "husl",
+                        "---0",
+                        "hls",
+                        "deep",
+                        "muted",
+                        "bright",
+                        "pastel",
+                        "dark",
+                        "colorblind",
+                        "---1",
+                        "Pastel1",
+                        "Pastel2",
+                        "Paired",
+                        "Accent",
+                        "Dark2",
+                        "Set1",
+                        "Set2",
+                        "Set3",
+                        "tab10",
+                        "tab20",
+                        "tab20b",
+                        "tab20c"
+                    ],
+                    "default": "husl",
+                    "action_type": 3,
+                    "tip": "\n            <html lang=\"en\">\n\n<style>\n    table, th {\n        border-bottom: 2px solid black;\n        /*border-top: 2px solid black;*/\n    }\n    img {\n        width: 300px;\n        height: 25px;\n    }\n</style>\n<body>\n<h3>Palettes</h3>\n<p>Tooltip</p>\n<table>\n     <tr>\n        <th colspan=\"5\">Color cycle - 20 -</th>\n    </tr>\n    <tr>\n        <td>husl</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/husl.png' width=\"200\" \n        height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>hls</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/hls.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>tab20</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/tab20.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>tab20b</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/tab20b.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>tab20c</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/tab20c.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">Color cycle - 12 -</th>\n    </tr>\n    <tr>\n        <td>Paired</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Paired.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>Set3</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Set3.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">Color cycle - 10 -</th>\n    </tr>\n    <tr>\n        <td>deep</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/deep.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>muted</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/muted.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>bright</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/bright.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>pastel</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/pastel.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>dark</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/dark.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>colorblind</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/colorblind.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>tab10</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/tab10.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">Color cycle - 9 -</th>\n    </tr>\n    <tr>\n        <td>Pastel1</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Pastel1.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>Set1</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Set1.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">Color cycle - 8 -</th>\n    </tr>\n    <tr>\n        <td>Pastel2</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Pastel2.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>Accent</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Accent.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Dark2</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Dark2.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Set2</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Set2.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n</table>\n<p>Please</p>\n</body>\n</html>"
+                },
+                "color": {
+                    "type": "color",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "color",
+                    "value": [
+                        44,
+                        105,
+                        176,
+                        255
+                    ],
+                    "default": [
+                        44,
+                        105,
+                        176,
+                        255
+                    ],
+                    "action_type": 3
+                },
+                "subplot-components": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "subplot-components",
+                    "value": true,
+                    "default": true,
+                    "action_type": 3,
+                    "tip": "Groups energy components in bar plot"
+                },
+                "scale-yaxis": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "scale-yaxis",
+                    "value": false,
+                    "default": false,
+                    "action_type": 3,
+                    "tip": "Uses exponential values in y-axis"
+                },
+                "remove-molid": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "remove-molid",
+                    "value": true,
+                    "default": true,
+                    "action_type": 3
+                },
+                "IE/C2 Entropy": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "IE/C2 Entropy",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "ie-color": {
+                            "type": "color",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "ie-color",
+                            "value": [
+                                0,
+                                0,
+                                255,
+                                255
+                            ],
+                            "default": [
+                                0,
+                                0,
+                                255,
+                                255
+                            ],
+                            "action_type": 3
+                        },
+                        "sigma-color": {
+                            "type": "group",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "sigma-color",
+                            "value": null,
+                            "default": null,
+                            "children": {
+                                "reliable": {
+                                    "type": "color",
+                                    "enabled": true,
+                                    "expanded": true,
+                                    "name": "reliable",
+                                    "value": [
+                                        0,
+                                        255,
+                                        0,
+                                        255
+                                    ],
+                                    "default": [
+                                        0,
+                                        255,
+                                        0,
+                                        255
+                                    ],
+                                    "action_type": 3,
+                                    "tip": "Color if sigma < 3.6kcal/mol"
+                                },
+                                "non-reliable": {
+                                    "type": "color",
+                                    "enabled": true,
+                                    "expanded": true,
+                                    "name": "non-reliable",
+                                    "value": [
+                                        255,
+                                        0,
+                                        0,
+                                        255
+                                    ],
+                                    "default": [
+                                        255,
+                                        0,
+                                        0,
+                                        255
+                                    ],
+                                    "action_type": 3,
+                                    "tip": "Color if sigma > 3.6kcal/mol"
+                                }
+                            }
+                        }
+                    }
+                },
+                "error-line": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "error-line",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "width": {
+                            "type": "float",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "width",
+                            "value": 0.7,
+                            "step": 0.1,
+                            "limits": [
+                                0.1,
+                                1.5
+                            ],
+                            "accelerated": true,
+                            "default": 0.7,
+                            "action_type": 3
+                        },
+                        "color": {
+                            "type": "color",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "color",
+                            "value": [
+                                0,
+                                0,
+                                0,
+                                255
+                            ],
+                            "default": [
+                                0,
+                                0,
+                                0,
+                                255
+                            ],
+                            "action_type": 3
+                        },
+                        "cap-size": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "cap-size",
+                            "value": 0,
+                            "step": 1,
+                            "limits": [
+                                0,
+                                50
+                            ],
+                            "accelerated": true,
+                            "default": 0,
+                            "action_type": 3
+                        },
+                        "representation": {
+                            "type": "list",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "representation",
+                            "value": "SD",
+                            "values": [
+                                "SD",
+                                "SEM"
+                            ],
+                            "default": "SD",
+                            "action_type": 3,
+                            "tip": "The metric representing the error line. SD, the Standard Deviation, describes the data distribution around the mean, while SEM, the Standard Error of the Mean, describes how representative the mean is of the population."
+                        }
+                    }
+                },
+                "bar-label": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "bar-label",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "show": {
+                            "type": "bool",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "show",
+                            "value": false,
+                            "default": false,
+                            "action_type": 3
+                        },
+                        "fontsize": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "fontsize",
+                            "value": 8,
+                            "limits": [
+                                2,
+                                20
+                            ],
+                            "default": 8,
+                            "action_type": 1
+                        },
+                        "label_type": {
+                            "type": "list",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "label_type",
+                            "value": "edge",
+                            "values": [
+                                "edge",
+                                "center"
+                            ],
+                            "default": "edge",
+                            "action_type": 3
+                        },
+                        "padding": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "padding",
+                            "value": 5,
+                            "limits": [
+                                0,
+                                50
+                            ],
+                            "default": 5,
+                            "action_type": 3
+                        }
+                    }
+                },
+                "fontsize": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "fontsize",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "x-ticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-ticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 1
+                        },
+                        "y-ticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-ticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 1
+                        },
+                        "x-label": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-label",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        },
+                        "y-label": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-label",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        },
+                        "title": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "title",
+                            "value": 14,
+                            "default": 14,
+                            "action_type": 1
+                        },
+                        "suptitle": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "suptitle",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        }
+                    }
+                },
+                "axes": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "axes",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "num-yticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "num-yticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 1
+                        },
+                        "x-rotation": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-rotation",
+                            "value": 45,
+                            "step": 1,
+                            "limits": [
+                                -90,
+                                90
+                            ],
+                            "accelerated": true,
+                            "default": 45,
+                            "action_type": 1
+                        },
+                        "y-rotation": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-rotation",
+                            "value": 0,
+                            "step": 1,
+                            "limits": [
+                                -90,
+                                90
+                            ],
+                            "accelerated": true,
+                            "default": 0,
+                            "action_type": 1
+                        },
+                        "y-inverted": {
+                            "type": "bool",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-inverted",
+                            "value": true,
+                            "default": true,
+                            "action_type": 3
+                        }
+                    }
+                },
+                "figure": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "figure",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "width": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "width",
+                            "value": 5,
+                            "default": 5,
+                            "action_type": 3
+                        },
+                        "height": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "height",
+                            "value": 4,
+                            "default": 4,
+                            "action_type": 3
+                        }
+                    }
+                }
+            }
+        },
+        "Heatmap Plot": {
+            "type": "group",
+            "enabled": true,
+            "expanded": false,
+            "name": "Heatmap Plot",
+            "value": null,
+            "default": null,
+            "children": {
+                "highlight-components": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "highlight-components",
+                    "value": true,
+                    "default": true,
+                    "action_type": 3,
+                    "tip": "Highlights receptor/ligand residues"
+                },
+                "legend": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "legend",
+                    "value": true,
+                    "default": true,
+                    "action_type": 3
+                },
+                "remove-molid": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "remove-molid",
+                    "value": true,
+                    "default": true,
+                    "action_type": 3,
+                    "tip": "Removes R/L labels from residue names"
+                },
+                "receptor-color": {
+                    "type": "color",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "receptor-color",
+                    "value": [
+                        255,
+                        85,
+                        127,
+                        255
+                    ],
+                    "default": [
+                        255,
+                        85,
+                        127,
+                        255
+                    ],
+                    "action_type": 3
+                },
+                "ligand-color": {
+                    "type": "color",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "ligand-color",
+                    "value": [
+                        0,
+                        255,
+                        0,
+                        255
+                    ],
+                    "default": [
+                        0,
+                        255,
+                        0,
+                        255
+                    ],
+                    "action_type": 3
+                },
+                "y-rotation": {
+                    "type": "int",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "y-rotation",
+                    "value": 0,
+                    "step": 1,
+                    "limits": [
+                        -90,
+                        90
+                    ],
+                    "accelerated": true,
+                    "default": 0,
+                    "action_type": 1
+                },
+                "Per-wise": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "Per-wise",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "palette": {
+                            "type": "list",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "palette",
+                            "value": "seismic",
+                            "values": [
+                                "seismic",
+                                "---1",
+                                "Balance_7",
+                                "Balance_5",
+                                "Curl_7",
+                                "Curl_5",
+                                "Delta_7",
+                                "Delta_5",
+                                "---2",
+                                "ArmyRose_7",
+                                "ArmyRose_5",
+                                "Geyser_7",
+                                "Geyser_5",
+                                "Temps_7",
+                                "Temps_5",
+                                "TealRose_7",
+                                "TealRose_5",
+                                "Tropic_7",
+                                "Tropic_5",
+                                "---3",
+                                "BrBG_7",
+                                "BrBG_5",
+                                "PRGn_7",
+                                "PRGn_5",
+                                "PiYG_7",
+                                "PiYG_5",
+                                "PuOr_7",
+                                "PuOr_5",
+                                "RdBu_7",
+                                "RdBu_5",
+                                "RdGy_7",
+                                "RdGy_5",
+                                "---4",
+                                "---5",
+                                "RdYlBu",
+                                "RdYlGn",
+                                "Spectral",
+                                "coolwarm"
+                            ],
+                            "default": "seismic",
+                            "action_type": 3,
+                            "tip": "\n            <html lang=\"en\">\n\n<style>\n    table, th {\n        border-bottom: 2px solid black;\n        /*border-top: 2px solid black;*/\n    }\n    img {\n        width: 300px;\n        height: 25px;\n    }\n</style>\n<body>\n<h3>Palettes</h3>\n<p>Tooltip</p>\n<table>\n     <tr>\n        <th colspan=\"5\">Cartoon Colors</th>\n    </tr>\n    <tr>\n        <td>ArmyRose_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/ArmyRose_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>ArmyRose_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/ArmyRose_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Geyser_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Geyser_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Geyser_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Geyser_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>TealRose_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/TealRose_7.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>TealRose_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/TealRose_5.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Tropic_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Tropic_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Tropic_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Tropic_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">CMOcean Colors</th>\n    </tr>\n    <tr>\n        <td>Balance_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Balance_7.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>Balance_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Balance_5.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Curl_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Curl_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Curl_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Curl_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Delta_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Delta_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Delta_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Delta_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">Colorbrew Colors</th>\n    </tr>\n    <tr>\n        <td>BrBG_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/BrBG_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>BrBG_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/BrBG_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PiYG_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PiYG_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PiYG_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PiYG_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PRGn_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PRGn_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PRGn_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PRGn_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PuOr_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PuOr_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PuOr_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PuOr_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdBu_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdBu_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdBu_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdBu_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdGy_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdGy_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdGy_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdGy_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdYlBu *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdYlBu.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdYlGn *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdYlGn.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Spectral *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Spectral.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>coolwarm *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/coolwarm.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n</table>\n\n<p>* No compatible with PyMOL visualization</p>\n</body>\n</html>"
+                        },
+                        "annotation": {
+                            "type": "bool",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "annotation",
+                            "value": false,
+                            "default": false,
+                            "action_type": 3
+                        },
+                        "x-rotation": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-rotation",
+                            "value": 90,
+                            "step": 1,
+                            "limits": [
+                                -90,
+                                90
+                            ],
+                            "accelerated": true,
+                            "default": 90,
+                            "action_type": 1
+                        }
+                    }
+                },
+                "Per-residue": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "Per-residue",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "palette": {
+                            "type": "list",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "palette",
+                            "value": "seismic",
+                            "values": [
+                                "seismic",
+                                "---1",
+                                "Balance_7",
+                                "Balance_5",
+                                "Curl_7",
+                                "Curl_5",
+                                "Delta_7",
+                                "Delta_5",
+                                "---2",
+                                "ArmyRose_7",
+                                "ArmyRose_5",
+                                "Geyser_7",
+                                "Geyser_5",
+                                "Temps_7",
+                                "Temps_5",
+                                "TealRose_7",
+                                "TealRose_5",
+                                "Tropic_7",
+                                "Tropic_5",
+                                "---3",
+                                "BrBG_7",
+                                "BrBG_5",
+                                "PRGn_7",
+                                "PRGn_5",
+                                "PiYG_7",
+                                "PiYG_5",
+                                "PuOr_7",
+                                "PuOr_5",
+                                "RdBu_7",
+                                "RdBu_5",
+                                "RdGy_7",
+                                "RdGy_5",
+                                "---4",
+                                "---5",
+                                "RdYlBu",
+                                "RdYlGn",
+                                "Spectral",
+                                "coolwarm"
+                            ],
+                            "default": "seismic",
+                            "action_type": 3,
+                            "tip": "\n            <html lang=\"en\">\n\n<style>\n    table, th {\n        border-bottom: 2px solid black;\n        /*border-top: 2px solid black;*/\n    }\n    img {\n        width: 300px;\n        height: 25px;\n    }\n</style>\n<body>\n<h3>Palettes</h3>\n<p>Tooltip</p>\n<table>\n     <tr>\n        <th colspan=\"5\">Cartoon Colors</th>\n    </tr>\n    <tr>\n        <td>ArmyRose_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/ArmyRose_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>ArmyRose_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/ArmyRose_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Geyser_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Geyser_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Geyser_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Geyser_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>TealRose_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/TealRose_7.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>TealRose_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/TealRose_5.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Tropic_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Tropic_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Tropic_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Tropic_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">CMOcean Colors</th>\n    </tr>\n    <tr>\n        <td>Balance_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Balance_7.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>Balance_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Balance_5.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Curl_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Curl_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Curl_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Curl_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Delta_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Delta_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Delta_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Delta_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">Colorbrew Colors</th>\n    </tr>\n    <tr>\n        <td>BrBG_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/BrBG_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>BrBG_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/BrBG_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PiYG_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PiYG_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PiYG_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PiYG_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PRGn_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PRGn_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PRGn_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PRGn_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PuOr_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PuOr_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PuOr_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PuOr_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdBu_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdBu_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdBu_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdBu_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdGy_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdGy_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdGy_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdGy_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdYlBu *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdYlBu.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdYlGn *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdYlGn.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Spectral *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Spectral.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>coolwarm *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/coolwarm.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n</table>\n\n<p>* No compatible with PyMOL visualization</p>\n</body>\n</html>"
+                        },
+                        "num-xticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "num-xticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 3
+                        },
+                        "x-rotation": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-rotation",
+                            "value": 0,
+                            "step": 1,
+                            "limits": [
+                                -90,
+                                90
+                            ],
+                            "accelerated": true,
+                            "default": 0,
+                            "action_type": 1
+                        }
+                    }
+                },
+                "fontsize": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "fontsize",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "x-ticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-ticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 1
+                        },
+                        "y-ticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-ticks",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 1
+                        },
+                        "x-label": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "x-label",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        },
+                        "y-label": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "y-label",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        },
+                        "title": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "title",
+                            "value": 14,
+                            "default": 14,
+                            "action_type": 1
+                        },
+                        "suptitle": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "suptitle",
+                            "value": 12,
+                            "default": 12,
+                            "action_type": 1
+                        },
+                        "legend": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "legend",
+                            "value": 9,
+                            "default": 9,
+                            "action_type": 3
+                        },
+                        "colorbar-ticks": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "colorbar-ticks",
+                            "value": 9,
+                            "default": 9,
+                            "action_type": 3
+                        },
+                        "colorbar-label": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "colorbar-label",
+                            "value": 11,
+                            "default": 11,
+                            "action_type": 3
+                        },
+                        "annotation": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "annotation",
+                            "value": 8,
+                            "default": 8,
+                            "action_type": 3
+                        }
+                    }
+                },
+                "figure": {
+                    "type": "group",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "figure",
+                    "value": null,
+                    "default": null,
+                    "children": {
+                        "width-per-residue": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "width-per-residue",
+                            "value": 10,
+                            "default": 10,
+                            "action_type": 3
+                        },
+                        "width-per-wise": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "width-per-wise",
+                            "value": 8,
+                            "default": 8,
+                            "action_type": 3
+                        },
+                        "height": {
+                            "type": "int",
+                            "enabled": true,
+                            "expanded": true,
+                            "name": "height",
+                            "value": 7,
+                            "default": 7,
+                            "action_type": 3
+                        }
+                    }
+                }
+            }
+        },
+        "Visualization": {
+            "type": "group",
+            "enabled": true,
+            "expanded": false,
+            "name": "Visualization",
+            "value": null,
+            "default": null,
+            "children": {
+                "palette": {
+                    "type": "list",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "palette",
+                    "value": "auto",
+                    "values": [
+                        "auto",
+                        "---0",
+                        "seismic",
+                        "---1",
+                        "Balance_7",
+                        "Balance_5",
+                        "Curl_7",
+                        "Curl_5",
+                        "Delta_7",
+                        "Delta_5",
+                        "---2",
+                        "ArmyRose_7",
+                        "ArmyRose_5",
+                        "Geyser_7",
+                        "Geyser_5",
+                        "Temps_7",
+                        "Temps_5",
+                        "TealRose_7",
+                        "TealRose_5",
+                        "Tropic_7",
+                        "Tropic_5",
+                        "---3",
+                        "BrBG_7",
+                        "BrBG_5",
+                        "PRGn_7",
+                        "PRGn_5",
+                        "PiYG_7",
+                        "PiYG_5",
+                        "PuOr_7",
+                        "PuOr_5",
+                        "RdBu_7",
+                        "RdBu_5",
+                        "RdGy_7",
+                        "RdGy_5"
+                    ],
+                    "default": "auto",
+                    "action_type": 3,
+                    "tip": "\n            <html lang=\"en\">\n\n<style>\n    table, th {\n        border-bottom: 2px solid black;\n        /*border-top: 2px solid black;*/\n    }\n    img {\n        width: 300px;\n        height: 25px;\n    }\n</style>\n<body>\n<h3>Palettes</h3>\n<p>Tooltip</p>\n<table>\n     <tr>\n        <th colspan=\"5\">Cartoon Colors</th>\n    </tr>\n    <tr>\n        <td>ArmyRose_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/ArmyRose_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>ArmyRose_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/ArmyRose_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Geyser_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Geyser_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Geyser_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Geyser_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>TealRose_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/TealRose_7.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>TealRose_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/TealRose_5.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Tropic_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Tropic_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Tropic_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Tropic_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">CMOcean Colors</th>\n    </tr>\n    <tr>\n        <td>Balance_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Balance_7.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n        <td></td>\n        <td>Balance_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Balance_5.png' width=\"200\" height=\"16\" \n        alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Curl_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Curl_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Curl_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Curl_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Delta_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Delta_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>Delta_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Delta_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <th colspan=\"5\">Colorbrew Colors</th>\n    </tr>\n    <tr>\n        <td>BrBG_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/BrBG_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>BrBG_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/BrBG_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PiYG_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PiYG_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PiYG_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PiYG_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PRGn_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PRGn_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PRGn_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PRGn_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>PuOr_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PuOr_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>PuOr_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/PuOr_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdBu_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdBu_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdBu_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdBu_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdGy_7</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdGy_7.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdGy_5</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdGy_5.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>RdYlBu *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdYlBu.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>RdYlGn *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/RdYlGn.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n    <tr>\n        <td>Spectral *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/Spectral.png' width=\"200\" height=\"16\" alt=\"\"></td>\n        <td></td>\n        <td>coolwarm *</td>\n        <td><img src='/home/patricio/anaconda3/envs/gmxMMPBSA/lib/python3.9/site-packages/GMXMMPBSA/analyzer/style/coolwarm.png' width=\"200\" height=\"16\" alt=\"\"></td>\n    </tr>\n</table>\n\n<p>* No compatible with PyMOL visualization</p>\n</body>\n</html>"
+                },
+                "cartoon_oval_length": {
+                    "type": "float",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "cartoon_oval_length",
+                    "value": 1.0,
+                    "step": 0.1,
+                    "default": 1.0,
+                    "action_type": 3
+                },
+                "cartoon_rect_length": {
+                    "type": "float",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "cartoon_rect_length",
+                    "value": 1.2,
+                    "step": 0.1,
+                    "default": 1.2,
+                    "action_type": 3
+                },
+                "cartoon_rect_width": {
+                    "type": "float",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "cartoon_rect_width",
+                    "value": 0.3,
+                    "step": 0.1,
+                    "default": 0.3,
+                    "action_type": 3
+                },
+                "cartoon_side_chain_helper": {
+                    "type": "bool",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "cartoon_side_chain_helper",
+                    "value": true,
+                    "default": true,
+                    "action_type": 3
+                },
+                "light_count": {
+                    "type": "int",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "light_count",
+                    "value": 1,
+                    "step": 1,
+                    "accelerated": false,
+                    "limits": [
+                        1,
+                        10
+                    ],
+                    "default": 1,
+                    "action_type": 3,
+                    "tip": "Defines the number of light sources"
+                },
+                "background": {
+                    "type": "list",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "background",
+                    "value": "gray50",
+                    "values": [
+                        "gray50",
+                        "---0",
+                        "black",
+                        "gray10",
+                        "gray20",
+                        "gray30",
+                        "gray40",
+                        "gray60",
+                        "gray70",
+                        "gray80",
+                        "gray90",
+                        "white"
+                    ],
+                    "default": "gray50",
+                    "action_type": 3
+                },
+                "representation": {
+                    "type": "list",
+                    "enabled": true,
+                    "expanded": true,
+                    "name": "representation",
+                    "value": "sticks",
+                    "values": [
+                        "sticks",
+                        "---0",
+                        "lines",
+                        "---1",
+                        "spheres",
+                        "surface",
+                        "mesh",
+                        "dots",
+                        "lines+dots",
+                        "sticks+dots"
+                    ],
+                    "default": "sticks",
+                    "action_type": 3
+                }
+            }
+        }
+    }
+}

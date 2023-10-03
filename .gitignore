@@ -20,3 +20,6 @@ libreoffice/
 zoom*
 QtProject.conf
 cef_user_data/
+
+# Ignore everything
+/*
